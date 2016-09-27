@@ -86,7 +86,7 @@ def main():
     n_plot = 100
     delta_x_plot = (float(x_end) - x_begin) / n_plot
     x = [x_begin + k * delta_x_plot for k in xrange(n_plot)]
-    y = [f(x[[k]]) for k in xrange(n_plot)]
+    y = [f(x[k]) for k in xrange(n_plot)]
     x += [x_end, x_end, x_begin]
     y += [f(x_end), 0.0, 0.0]
 
@@ -103,7 +103,7 @@ def main():
 
     n_plot = n_interval
     delta_x_plot = (float(x_end) - float(x_begin)) / n_plot
-    x = [x_begin + k * delta_x_plot for k in xrange]
+    x = [x_begin + k * delta_x_plot for k in xrange(n_plot)]
     y = [f(xk) for xk in x]
     x += [x_end, x_end, x_begin]
     y += [f(x_end), 0.0, 0.0]
